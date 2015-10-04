@@ -1,0 +1,17 @@
+#
+# The top-level 'feature' for the pllinux-x86 custom kernel.
+#
+# Essentially this is a convenient top-level container or starting
+# point for adding lower-level config fragements and features.
+#
+
+# pllinux-x86.cfg in the linux-yocto-custom subdir is just a
+# convenient place for adding random config fragments.
+
+kconf hardware pllinux-x86.cfg
+
+# These are used by yocto-kernel to add config fragments and features.
+# Don't remove if you plan on using yocto-kernel with this BSP.
+
+kconf hardware pllinux-x86-user-config.cfg
+include pllinux-x86-user-patches.scc
